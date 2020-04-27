@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="rightBlock">
+            <p><a href="#modal2">Our aim</a></p>
+            <p> <a href="#modal">How we work</a></p>
+
+
+            <div class="remodal" data-remodal-id="modal">
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h1>How we work</h1>
+                <p>
+                    Vent is a simple website with one landing page that allows users to let -out their frustrations and
+                    sadness at teh click f a button that redirects
+                    them to a secure one-on-one WhatsApp chat with a "listener". A listener is a person who receives the
+                    anonymous user in a secure chat and listens to what the user has to say without
+                    giving advice or opinion except when requested by the user.
+                </p>
+                <br>
+                <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+            </div>
+
+
+
+            <div class="remodal" data-remodal-id="modal2">
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h1>Our aim</h1>
+                <p>
+                    Our sole aim is to create a safe space for people to share their frustrations and problems without
+                    fear of judgement, cyber -bullying or condemnation. We beleive
+                    that people want a listening party that can lend them an ear to their problemswithout necessarily
+                    telling them what to do. Even the most basic things such as being stuck in traffic
+                    can disrupt a persons mood for the day and can affect productivity. We want to give people the
+                    chance to talk about what is hurting them ans have them rest assured that they will receive zero
+                    backlash from self-disclosure.
+                </p>
+                <br>
+                <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body">
+        <div class="left">
+            <h1>
+                Say whats on your mind
+            </h1>
+
+            <p>
+                Vent is a service platform that allows people to annonymously share their stories and Frustrations. The
+                sole purpose is; emotional decluttering and healing in a non-judgemental atmosphere.
+            </p>
+
+            <button>
+                Vent
+            </button>
+        </div>
+        <div class="right">
+            <img src="./svg/img.svg" alt="">
+        </div>
+    </div>
+
+</body>
+<link rel="stylesheet" href="./node_modules/remodal/dist/remodal.css">
+<link rel="stylesheet" href="./node_modules/remodal/dist/remodal-default-theme.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="./node_modules/remodal/dist/remodal.js"></script>
+
+<style>
+    .nav {
+        height: 60px;
+    }
+
+    html {
+        display: inline-table;
+    }
+
+    .nav .rightBlock {
+        display: flex;
+        float: right;
+        padding-right: 30px;
+    }
+
+    .nav .rightBlock p {
+        font-family: Overpass;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        display: flex;
+        margin-left: 25px;
+        align-items: center;
+        color: #2A292E;
+    }
+
+    .right {
+        text-align: right;
+        width: 50%;
+    }
+
+    .left {
+        text-align: left;
+        width: 50%;
+    }
+
+    .body {
+        display: flex;
+    }
+
+
+    .body .right img {
+        height: 70%;
+    }
+
+    .body .left h1 {
+
+        font-family: Overpass;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 107px;
+        display: flex;
+        align-items: center;
+
+        color: #2A292E;
+
+    }
+
+    .body .left p {
+        font-family: Overpass;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        color: #928EA2;
+    }
+
+
+    .body .left button {
+        width: 206px;
+        height: 50px;
+        left: 94px;
+        top: 704px;
+        background: #5680E9;
+        border: 1px solid #5680E9;
+        box-sizing: border-box;
+        font-family: Overpass;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 31px;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .body {
+        margin: 0;
+        padding: 20px 15vw;
+    }
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    a:focus,
+    a:hover {
+        background-color: transparent;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #00A0C6;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Use a media query to add a breakpoint at 800px: */
+    @media screen and (max-width: 800px) {
+        .body {
+            display: block;
+            /* text-align: left; */
+            width: max-content;
+        }
+
+        .left {
+            text-align: left;
+            width: 100vw;
+        }
+
+        .nav {
+            height: 60px;
+            width: 100vw;
+            float: right;
+        }
+
+        body {
+            display: table-row-group;
+            overflow: hidden;
+        }
+
+
+    }
+</style>
+</style>
+
+</html>
