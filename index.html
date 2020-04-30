@@ -61,7 +61,7 @@
                 sole purpose is; emotional decluttering and healing in a non-judgemental atmosphere.
             </p>
 
-            <a href="https://api.whatsapp.com/send?phone=2348029631765">
+            <a id='trigger'>
                 <button>
                     Vent
                 </button>
@@ -79,7 +79,23 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script>
 <script src="./node_modules/remodal/dist/remodal.js"></script>
+<script>
 
+    //randomly select a number to redirect to
+    var option1 = "2348029631765"
+    var option2 = "2348081614643"
+    var href = "https://api.whatsapp.com/send?phone="
+    var decide = Math.random()
+    if (decide > 0.5) {
+        href = href + option1
+    }
+    else {
+        href = href + option2
+    }
+
+    document.getElementById('trigger').setAttribute('href', href)
+
+</script>
 <style>
     .nav {
         height: 60px;
