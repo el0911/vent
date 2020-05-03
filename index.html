@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>Vent </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&display=swap" rel="stylesheet">
 </head>
 
@@ -50,7 +51,7 @@
         </div>
     </nav>
 
-    <div class="body">
+    <div class="body container">
         <div class="left">
             <h1>
                 Say whats on your mind
@@ -123,17 +124,15 @@
 
     .right {
         text-align: right;
-        width: 50%;
+        width: -webkit-fill-available;
     }
 
     .left {
         text-align: left;
-        width: 50%;
+        width: -webkit-fill-available;
     }
 
-    .body {
-        display: flex;
-    }
+
 
 
     .body .right img {
@@ -141,7 +140,7 @@
     }
 
     .body .left h1 {
-
+        width: fit-content;
         font-family: Overpass;
         font-style: normal;
         font-weight: bold;
@@ -158,11 +157,13 @@
         font-family: Overpass;
         font-style: normal;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 33px;
         line-height: 28px;
         display: flex;
         align-items: center;
         color: #928EA2;
+        /* text-align: -webkit-center; */
+        line-height: 1.8;
     }
 
 
@@ -192,10 +193,9 @@
         padding: 20px 15vw;
     }
 
-    body {
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
+    .body {
+        display: -webkit-inline-box !important;
+        /* overflow: hidden; */
     }
 
     a:focus,
@@ -214,12 +214,22 @@
         cursor: pointer;
     }
 
+    .nav .rightBlock {
+            display: flex;
+            /* float: right; */
+            /* padding-right: 30px; */
+            position: absolute;
+            right: 0;
+            font-size: 31px;
+            top: 15px;
+        }
+
     /* Use a media query to add a breakpoint at 800px: */
     @media screen and (max-width: 800px) {
         .body {
             display: block;
             /* text-align: left; */
-            width: max-content;
+
         }
 
         .left {
@@ -235,9 +245,43 @@
 
         body {
             display: table-row-group;
-            overflow: hidden;
+            overflow: scroll;
         }
 
+        img {
+            display: none;
+        }
+
+        .nav .rightBlock {
+            display: flex;
+            /* float: right; */
+            /* padding-right: 30px; */
+            position: absolute;
+            right: 10px;
+            font-size: 31px;
+            top: 15px;
+        }
+
+        .body .left button {
+            width: -webkit-fill-available;
+            height: 76px;
+            left: 94px;
+            top: 704px;
+            background: #5680E9;
+            border: 1px solid #5680E9;
+            box-sizing: border-box;
+            font-family: Overpass;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 31px;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 0px;
+        }
 
     }
 </style>
