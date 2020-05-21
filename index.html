@@ -55,11 +55,17 @@
         </div>
     </nav>
 
-    <div class="body container">
+    <div class="body">
+        
         <div class="left">
             <h1>
                 Say whats on your mind
             </h1>
+
+            <div class=" mobileshow ">
+                <img src="./svg/img.svg" style="    width: 100%;
+                " alt="">
+            </div>
 
             <p>
                 Vent is a service platform that allows people to annonymously share their stories and Frustrations. The
@@ -72,7 +78,7 @@
                 </button>
             </a>
         </div>
-        <div class="right">
+        <div class="right mobilehide ">
             <img src="./svg/img.svg" alt="">
         </div>
     </div>
@@ -105,6 +111,10 @@
         height: 60px;
     }
 
+    .mobileshow{
+        display: none;
+    }
+
     html {
         display: inline-table;
     }
@@ -126,11 +136,17 @@
         color: #2A292E;
     }
 
+    .body{
+        width: 90vw;
+    }
+
     .right {
         text-align: right;
         width: -webkit-fill-available;
         max-width: 50%;
     display: table-cell;
+    width: 45vw;
+    text-align: center;
     }
 
     .left {
@@ -149,15 +165,14 @@
 
     .body .left h1 {
         width: fit-content;
-        font-family: Overpass;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 70px;
-        line-height: 107px;
-        display: flex;
-        align-items: center;
-
-        color: #2A292E;
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    color: #2A292E;
 
     }
 
@@ -165,7 +180,8 @@
         font-family: Overpass;
         font-style: normal;
         font-weight: bold;
-        font-size: 33px;
+
+        font-size: 21px;
         line-height: 28px;
         display: flex;
         align-items: center;
@@ -238,8 +254,16 @@
             display: block !important;
             zoom: 0.6;
             /* text-align: left; */
-
+            width: -webkit-fill-available;
         }
+
+        .mobilehide{
+            display: none;
+        }
+
+        .mobileshow{
+        display: block;
+    }
 
         .right{
             text-align: -webkit-center !important;
@@ -255,7 +279,6 @@
 
         .left {
             text-align: left;
-            width: 100vw;
             max-width: none;
 
         }
