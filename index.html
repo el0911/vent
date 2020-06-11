@@ -92,17 +92,10 @@
 <script>
 
     //randomly select a number to redirect 
-    var option1 = "2348029631765"
-    var option2 = "2348081614643"
-    var href = "https://api.whatsapp.com/send?phone="
-    var decide = Math.random()
-    if (decide > 0.5) {
-        href = href + option1
-    }
-    else {
-        href = href + option2
-    }
-
+    var numbers = ["2348081614643","233559654087"]
+    var option = parseInt(`${Math.random() * (numbers.length)}`)
+    var href = `https://api.whatsapp.com/send?phone=${numbers[option]}`
+   
     document.getElementById('trigger').setAttribute('href', href)
 
 </script>
